@@ -1,0 +1,25 @@
+<div>
+    <form [formGroup]="budgetForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="budget_name">Budget Name:</label>
+        <input type="text" id="budget_name" formControlName="budget_name">
+      </div>
+      <div>
+        <label for="income_category_name">Income Category:</label>
+        <input type="number" id="income_category_id" formControlName="income_category_id">
+      </div>
+      <div>
+        <label for="user_id">User ID:</label>
+        <input type="number" id="user_id" formControlName="user_id">
+      </div>
+      <div>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" formControlName="amount">
+      </div>
+      <div>
+        <label for="always_notify">Always Notify:</label>
+        <input type="checkbox" id="always_notify" formControlName="always_notify">
+      </div>
+      <button type="submit" [disabled]="budgetForm.invalid">Submit</button>
+    </form>
+  </div>
