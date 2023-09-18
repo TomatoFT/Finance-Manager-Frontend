@@ -1,16 +1,16 @@
 <div>
     <form [formGroup]="budgetForm" (ngSubmit)="onSubmit()">
       <div>
-        <label for="budget_name">Budget Name:</label>
-        <input type="text" id="budget_name" formControlName="budget_name">
+        <label for="name">Budget Name:</label>
+        <input type="text" id="name" formControlName="name">
       </div>
       <div>
         <label for="income_category_name">Income Category:</label>
-        <input type="number" id="income_category_id" formControlName="income_category_id">
+        <input type="number" id="income_category_id" formControlName="income_category">
       </div>
       <div>
         <label for="user_id">User ID:</label>
-        <input type="number" id="user_id" formControlName="user_id">
+        <input type="number" id="user_id" formControlName="user">
       </div>
       <div>
         <label for="amount">Amount:</label>

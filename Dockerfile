@@ -16,4 +16,4 @@ RUN npm install -g @angular/cli
 COPY . .
 
 # Build the Angular app
-CMD [ "ng", "serve", "--host", "0.0.0.0" ]
+CMD [ "ng", "serve","--open", "--host", "0.0.0.0" ]

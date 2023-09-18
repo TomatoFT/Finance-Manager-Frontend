@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-budget-add',
@@ -9,27 +10,26 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class BudgetAddComponent implements OnInit {
   budgetForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private authService: AuthService) { }
 
   ngOnInit() {
     this.budgetForm = this.formBuilder.group({
-      budget_name: ['', Validators.required],
-      income_category_id: ['', Validators.required],
-      user_id: ['', Validators.required],
+      name: ['', Validators.required],
+      income_category: ['', Validators.required],
       amount: [0, Validators.required],
       always_notify: [true],
     });
   }
 
   onSubmit() {
-    // Handle form submission here
-    console.log(this.budgetForm.value);
-    fetch('http://localhost:8000/budget/add_budget_data', {
+    fetch('http://localhost:8000/budget/', {
     method: 'POST',
     mode: "cors",
     credentials: "include",
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json', 
+      "Authorization": "Bearer " + this.authService.getAccessToken(),
     },
     body: JSON.stringify(this.budgetForm.value)
   })

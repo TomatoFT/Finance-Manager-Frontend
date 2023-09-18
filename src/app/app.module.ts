@@ -10,6 +10,11 @@ import { BudgetAddComponent } from './budget-add/budget-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BudgetUpdateComponent } from './budget-update/budget-update.component';
 import { BudgetService } from './budget.service';
+import { BudgetViewComponent } from './budget-view/budget-view.component';
+import { BudgetDetailViewComponent } from './budget-detail-view/budget-detail-view.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +22,16 @@ import { BudgetService } from './budget.service';
     BudgetManagementComponent,
     BudgetAddComponent,
     BudgetUpdateComponent,
+    BudgetViewComponent,
+    BudgetDetailViewComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BudgetService } from '../budget.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-budget-update',
@@ -17,6 +18,7 @@ export class BudgetUpdateComponent implements OnInit, OnDestroy {
   constructor(
     private formBuilder: FormBuilder,
     public budgetService: BudgetService,
+    private authService: AuthService,
     private route: ActivatedRoute
   ) {}
 
@@ -27,7 +29,7 @@ export class BudgetUpdateComponent implements OnInit, OnDestroy {
       this.dataSubscription = this.budgetService.getData(id).subscribe(
         data => {
           this.data = data[0]; // Assign the first item in the data array
-          console.log(this.data);
+          console.log(`Data is the ${this.data.name}`);
           this.initializeForm();
         },
         error => {
@@ -36,6 +38,7 @@ export class BudgetUpdateComponent implements OnInit, OnDestroy {
       );
     });
   }
+  
 
   ngOnDestroy() {
     if (this.dataSubscription) {
@@ -44,22 +47,26 @@ export class BudgetUpdateComponent implements OnInit, OnDestroy {
   }
 
   initializeForm() {
-    this.budgetForm = this.formBuilder.group({
-      budget_name: [this.data.budget_name, Validators.required],
-      income_category_id: [this.data.income_category_id, Validators.required],
-      user_id: [this.data.user_id, Validators.required],
-      amount: [this.data.amount, Validators.required],
-      always_notify: [this.data.always_notify],
-    });
+    console.log(this.data);
+    if (this.data) {
+      this.budgetForm = this.formBuilder.group({
+        name: [this.data.name, Validators.required],
+        income_category: [this.data.income_category, Validators.required],
+        user: [this.data.user, Validators.required],
+        amount: [this.data.amount, Validators.required],
+        always_notify: [this.data.always_notify],
+      });
+    }
   }
 
   onSubmit() {
     console.log(this.budgetForm.value);
     const id = this.route.snapshot.params['id'];
-    fetch(`http://localhost:8000/budget/update_budget_data/${id}`, {
+    fetch(`http://localhost:8000/budget/${id}`, {
       method: 'PUT',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.authService.getAccessToken()}`
       },
       body: JSON.stringify(this.budgetForm.value)
     })
