@@ -1,0 +1,62 @@
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .heroes-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .heroes-table th,
+  .heroes-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .read-button,
+  .update-button,
+  .delete-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .read-button:hover,
+  .update-button:hover,
+  .delete-button:hover {
+    background-color: #0056b3;
+  }
+
+/* styles.css */
+.navbar {
+    background-color: #000000;
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-right: 10px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  .nav-link:hover {
+    background-color: #4e4e53;
+  }

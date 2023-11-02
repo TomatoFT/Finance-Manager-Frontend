@@ -32,6 +32,7 @@ export class LoginComponent {
         // Store the token in local storage
         this.authService.setAccessToken(accessToken);
         this.authService.setRefreshToken(refreshToken);
+        console.log(accessToken)
 
         // Redirect to the desired route after successful login
         this.router.navigate(['/budget']);

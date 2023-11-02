@@ -11,7 +11,7 @@ import { LogoutComponent } from './logout/logout.component';
 const routes: Routes = [
   { path: 'budget/add', component: BudgetAddComponent },
   { path: 'budget/update/:id', component: BudgetUpdateComponent },
-  { path: 'budget/', component: BudgetViewComponent},
+  { path: 'budget', component: BudgetViewComponent},
   { path: 'budget/:id', component: BudgetDetailViewComponent },
   { path: 'auth/refresh', component: TokenRefreshComponent},
   { path: 'auth/logout', component: LogoutComponent},

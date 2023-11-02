@@ -71,10 +71,11 @@ export class BudgetUpdateComponent implements OnInit, OnDestroy {
       },
       body: JSON.stringify(this.budgetForm.value)
     })
-      .then(response => response.json())
       .then(result => {
         console.log('Success:', result);
-      })
+        location.reload();
+      }
+      )
       .catch(error => {
         console.error('Error:', error);
       });
