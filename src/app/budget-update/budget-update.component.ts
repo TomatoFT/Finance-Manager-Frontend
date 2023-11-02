@@ -10,6 +10,7 @@ import { AuthService } from '../auth.service';
   templateUrl: './budget-update.component.html',
   styleUrls: ['./budget-update.component.css']
 })
+
 export class BudgetUpdateComponent implements OnInit, OnDestroy {
   budgetForm!: FormGroup;
   data: any = {}; // Change data type to object
@@ -29,7 +30,7 @@ export class BudgetUpdateComponent implements OnInit, OnDestroy {
       this.dataSubscription = this.budgetService.getData(id).subscribe(
         data => {
           this.data = data[0]; // Assign the first item in the data array
-          console.log(`Data is the ${this.data.name}`);
+          console.log(`Init Data is the ${JSON.stringify(this.data)}`);
           this.initializeForm();
         },
         error => {
@@ -52,15 +53,15 @@ export class BudgetUpdateComponent implements OnInit, OnDestroy {
       this.budgetForm = this.formBuilder.group({
         name: [this.data.name, Validators.required],
         income_category: [this.data.income_category, Validators.required],
-        user: [this.data.user, Validators.required],
         amount: [this.data.amount, Validators.required],
-        always_notify: [this.data.always_notify],
+        always_notify: [this.data.always_notify]
       });
     }
+    console.log(JSON.stringify(this.budgetForm.value))
   }
 
   onSubmit() {
-    console.log(this.budgetForm.value);
+    console.log(`The data is ${JSON.stringify(this.budgetForm.value)}`);
     const id = this.route.snapshot.params['id'];
     fetch(`http://localhost:8000/budget/${id}`, {
       method: 'PUT',

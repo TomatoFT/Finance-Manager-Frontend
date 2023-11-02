@@ -34,9 +34,10 @@ export class AuthService {
     localStorage.setItem(this.refreshToken, token);
   }
 
-  // removeToken(): void {
-  //   localStorage.removeItem(this.tokenKey);
-  // }
+  removeToken(): void {
+    localStorage.setItem(this.accessToken, '');
+    localStorage.setItem(this.refreshToken, '');
+  }
 
   isAuthenticated(): boolean {
     const token = this.getAccessToken();

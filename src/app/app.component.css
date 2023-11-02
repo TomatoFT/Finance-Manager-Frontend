@@ -1,0 +1,18 @@
+.split-container {
+    display: flex;
+    height: 100vh; /* Adjust the height as needed */
+  }
+  
+  .left {
+    width: 25%;
+    background-color: #f1f1f1; /* Adjust the background color as needed */
+  }
+  
+  .right {
+    flex: 1;
+    background-color: #ffffff; /* Adjust the background color as needed */
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+  }

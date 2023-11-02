@@ -14,7 +14,15 @@ import { BudgetViewComponent } from './budget-view/budget-view.component';
 import { BudgetDetailViewComponent } from './budget-detail-view/budget-detail-view.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { TokenRefreshComponent } from './token-refresh/token-refresh.component';
+import { LogoutComponent } from './logout/logout.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -25,6 +33,9 @@ import { FormsModule } from '@angular/forms';
     BudgetViewComponent,
     BudgetDetailViewComponent,
     LoginComponent,
+    TokenRefreshComponent,
+    LogoutComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,8 +43,15 @@ import { FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,    
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule,
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

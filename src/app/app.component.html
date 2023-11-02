@@ -1,7 +1,8 @@
-<script
-src="https://code.jquery.com/jquery-3.4.1.js"
-integrity="sha256–2z0P7MLoyxByUtvAk/xjkmindefS4auh4Pfzbm7y6g0="
-crossorigin="anonymous">
-</script>
-
-<router-outlet></router-outlet>
+<div class="split-container">
+    <div class="left">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="right">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

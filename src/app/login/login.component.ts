@@ -34,7 +34,7 @@ export class LoginComponent {
         this.authService.setRefreshToken(refreshToken);
 
         // Redirect to the desired route after successful login
-        this.router.navigate(['/views']);
+        this.router.navigate(['/budget']);
       },
       error => {
         // Handle login error

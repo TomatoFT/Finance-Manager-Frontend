@@ -5,12 +5,16 @@ import { BudgetUpdateComponent } from './budget-update/budget-update.component';
 import { BudgetViewComponent } from './budget-view/budget-view.component';
 import { BudgetDetailViewComponent } from './budget-detail-view/budget-detail-view.component';
 import { LoginComponent } from './login/login.component';
+import { TokenRefreshComponent } from './token-refresh/token-refresh.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
-  { path: 'budget', component: BudgetAddComponent },
-  { path: 'update/:id', component: BudgetUpdateComponent },
-  { path: 'views', component: BudgetViewComponent},
-  { path: 'views/:id', component: BudgetDetailViewComponent },
+  { path: 'budget/add', component: BudgetAddComponent },
+  { path: 'budget/update/:id', component: BudgetUpdateComponent },
+  { path: 'budget/', component: BudgetViewComponent},
+  { path: 'budget/:id', component: BudgetDetailViewComponent },
+  { path: 'auth/refresh', component: TokenRefreshComponent},
+  { path: 'auth/logout', component: LogoutComponent},
   { path: '', component: LoginComponent }
 ];
 
