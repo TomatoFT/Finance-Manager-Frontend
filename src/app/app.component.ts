@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './auth.service';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
@@ -15,7 +14,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        // Check if the current URL is the root URL
         this.showSidebar = event.url !== '/' && event.urlAfterRedirects !== '/';
       }
     });
