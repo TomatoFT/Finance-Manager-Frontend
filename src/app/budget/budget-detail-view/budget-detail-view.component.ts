@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BudgetService } from '../budget.service';
+import { BudgetService } from '../../budget.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

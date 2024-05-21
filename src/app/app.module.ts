@@ -5,13 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BudgetManagementComponent } from './budget-management/budget-management.component';
-import { BudgetAddComponent } from './budget-add/budget-add.component';
+import { BudgetManagementComponent } from './budget/budget-management/budget-management.component';
+import { BudgetAddComponent } from './budget/budget-add/budget-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BudgetUpdateComponent } from './budget-update/budget-update.component';
+import { BudgetUpdateComponent } from './budget/budget-update/budget-update.component';
 import { BudgetService } from './budget.service';
-import { BudgetViewComponent } from './budget-view/budget-view.component';
-import { BudgetDetailViewComponent } from './budget-detail-view/budget-detail-view.component';
+import { BudgetViewComponent } from './budget/budget-view/budget-view.component';
+import { BudgetDetailViewComponent } from './budget/budget-detail-view/budget-detail-view.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { TokenRefreshComponent } from './token-refresh/token-refresh.component';
