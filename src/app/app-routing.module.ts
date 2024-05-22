@@ -4,9 +4,9 @@ import { BudgetAddComponent } from './budget/budget-add/budget-add.component';
 import { BudgetUpdateComponent } from './budget/budget-update/budget-update.component';
 import { BudgetViewComponent } from './budget/budget-view/budget-view.component';
 import { BudgetDetailViewComponent } from './budget/budget-detail-view/budget-detail-view.component';
-import { LoginComponent } from './login/login.component';
-import { TokenRefreshComponent } from './token-refresh/token-refresh.component';
-import { LogoutComponent } from './logout/logout.component';
+import { LoginComponent } from './auth/login/login.component';
+import { TokenRefreshComponent } from './auth/token-refresh/token-refresh.component';
+import { LogoutComponent } from './auth/logout/logout.component';
 
 const routes: Routes = [
   { path: 'budget/add', component: BudgetAddComponent },

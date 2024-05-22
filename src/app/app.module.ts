@@ -12,10 +12,10 @@ import { BudgetUpdateComponent } from './budget/budget-update/budget-update.comp
 import { BudgetService } from './budget.service';
 import { BudgetViewComponent } from './budget/budget-view/budget-view.component';
 import { BudgetDetailViewComponent } from './budget/budget-detail-view/budget-detail-view.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { FormsModule } from '@angular/forms';
-import { TokenRefreshComponent } from './token-refresh/token-refresh.component';
-import { LogoutComponent } from './logout/logout.component';
+import { TokenRefreshComponent } from './auth/token-refresh/token-refresh.component';
+import { LogoutComponent } from './auth/logout/logout.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
