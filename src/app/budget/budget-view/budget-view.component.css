@@ -60,3 +60,7 @@ h2 {
   .nav-link:hover {
     background-color: #4e4e53;
   }
+
+  mat-toolbar {
+    background-color: #0056b3;
+  }

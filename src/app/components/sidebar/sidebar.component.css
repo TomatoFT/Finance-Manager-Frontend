@@ -1,4 +1,6 @@
-.custom-sidenav-container {
+mat-sidenav-container {
     display: flex;
-    width: 25%;
+    width: full-width;
+    background-color: aqua;
+    justify-content: flex-start;
   }
