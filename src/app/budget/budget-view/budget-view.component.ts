@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BudgetService } from '../../budget.service';
-import { AuthService } from '../../auth.service';
+import { BudgetService } from '../../service/budget.service';
+import { AuthService } from '../../service/auth.service';
 
 @Component({
   selector: 'app-budget-view',
