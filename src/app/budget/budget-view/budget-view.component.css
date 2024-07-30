@@ -33,34 +33,18 @@ h2 {
     background-color: #0056b3;
   }
 
-/* styles.css */
-.navbar {
-    background-color: #000000;
-    padding: 10px;
-    padding-bottom: 20px;
-  }
-  
-  .navbar-nav {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-item {
-    margin-right: 10px;
-  }
-  
-  .nav-link {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px;
-  }
-  
-  .nav-link:hover {
-    background-color: #4e4e53;
-  }
-
   mat-toolbar {
     background-color: #0056b3;
   }
+
+  mat-card {
+    background-color: white;
+    width: 100%;
+  }
+
+.example-card {
+    width: 100%;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    padding: 2%;
+    color: white;
+}

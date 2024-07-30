@@ -1,6 +1,17 @@
 mat-sidenav-container {
     display: flex;
     width: full-width;
-    background-color: aqua;
-    justify-content: flex-start;
+    background-color: rgb(15, 223, 84);
+    justify-content: center;
+
   }
+
+mat-sidenav-list {
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 50%;
+  /* height: auto; */
+}
