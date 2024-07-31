@@ -1,0 +1,88 @@
+.container {
+    flex: 1;
+    background: linear-gradient(to right, #3aec5b, #8bb6ff);;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  mat-card-title {
+    color: green;
+    padding: 5%;
+    font-size: 35px;
+  }
+  
+  mat-form-field {
+    text-align: start;
+    width: 48%;
+    padding-right: 20px;  
+}
+
+  mat-form-field.address {
+    text-align: start;
+    width: 97%;
+  }
+
+  .submit-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+  }
+  
+  .login-button {
+    width: 100%
+  }
+  
+  .signup-button {
+    width: 100%
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header h1 {
+    color: rgb(2, 0, 149);
+  }
+  
+  .logo-image {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+  
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+  }
+  
+  .submit-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .divider {
+    flex-grow: 1;
+    border-bottom: 1px solid #000; /* Adjust color as needed */
+    margin: 0 10px; /* Adjust spacing as needed */
+  }
+  
+  .register-button, .reset-button {
+    margin: 0 10px; /* Adjust spacing as needed */
+    width: 100%;
+  }
+  
+mat-card-image {
+    width: 45%;
+}

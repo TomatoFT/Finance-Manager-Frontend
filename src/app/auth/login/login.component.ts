@@ -29,6 +29,7 @@ export class LoginComponent {
         // Assuming the backend returns a token in the response
         const refreshToken = response.refresh_token;
         const accessToken = response.access_token;
+        
         // Store the token in local storage
         this.authService.setAccessToken(accessToken);
         this.authService.setRefreshToken(refreshToken);

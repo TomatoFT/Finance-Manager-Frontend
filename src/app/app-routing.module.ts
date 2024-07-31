@@ -7,6 +7,7 @@ import { BudgetDetailViewComponent } from './budget/budget-detail-view/budget-de
 import { LoginComponent } from './auth/login/login.component';
 import { TokenRefreshComponent } from './auth/token-refresh/token-refresh.component';
 import { LogoutComponent } from './auth/logout/logout.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 const routes: Routes = [
   { path: 'budget/add', component: BudgetAddComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'budget/:id', component: BudgetDetailViewComponent },
   { path: 'auth/refresh', component: TokenRefreshComponent},
   { path: 'auth/logout', component: LogoutComponent},
+  { path: 'auth/signup', component: SignupComponent},
   { path: '', component: LoginComponent }
 ];
 

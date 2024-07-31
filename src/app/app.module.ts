@@ -28,6 +28,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { SignupComponent } from './auth/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     TokenRefreshComponent,
     LogoutComponent,
     SidebarComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

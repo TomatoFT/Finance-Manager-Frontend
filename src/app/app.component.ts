@@ -14,7 +14,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.showSidebar = event.url !== '/' && event.urlAfterRedirects !== '/';
+        this.showSidebar = event.url !== '/' 
+          && event.urlAfterRedirects !== '/' 
+          && event.url != '/auth/signup';
+        
       }
     });
   }

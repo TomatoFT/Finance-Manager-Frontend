@@ -2,21 +2,34 @@
   <mat-card-header class="header">
     <img mat-card-image src="../../assets/logo.png" class="logo-image"/>
   </mat-card-header>
-  <mat-card-title>Login</mat-card-title>
+
+<mat-card-title>Login</mat-card-title>
   <form (ngSubmit)="onSubmit()">
     <mat-card-content>
-      <mat-form-field class="full-width">
+      <mat-form-field class="username">
         <mat-label>Username</mat-label>
         <input matInput placeholder="Type your username" id="username" [(ngModel)]="username" name="username" required>
+
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>Password</mat-label>
         <input matInput type="password" id="password" [(ngModel)]="password" name="password" required>
       </mat-form-field>
     </mat-card-content>
-    <mat-card-actions class="actions">
-      <button mat-raised-button color="primary" type="submit" class="login-button">Login</button>
-      <button mat-raised-button color="secondary" type="button" class="signup-button">Sign Up</button>
+    
+    <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit" class="login-button">Login</button>
     </mat-card-actions>
+  
+    <mat-card-actions>
+      <button mat-raised-button color="accent" 
+              onclick="location.href = '/auth/signup';"
+              type="button" 
+              class="signup-button">
+              Sign Up
+            </button>
+  </mat-card-actions>
+
+
   </form>
 </mat-card>
