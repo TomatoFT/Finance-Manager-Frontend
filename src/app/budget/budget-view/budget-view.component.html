@@ -1,52 +1,66 @@
+<mat-card class="welcome-card" appearance="outlined">
+  <mat-card-header>
+    <h3>Welcome, this is budget management space!</h3>
+  </mat-card-header>
 
-<mat-card class="example-card" appearance="outlined">
-<mat-card-header>
-  <h3>Welcome, this is budget management space!</h3>
-</mat-card-header>
+  <mat-card-content>
+    <p>This is the space for you to manage your budget and income Category </p>
+  </mat-card-content>
 </mat-card>
 
-<mat-toolbar>
-  <button mat-button routerLink="/budget/add">Create Budget</button>
-  <button mat-button routerLink="/budget">Budget Managements</button>
-  <button mat-button routerLink="/budget/income/add">Create Income Category</button>
-  <button mat-button routerLink="/budget/income">Income Category Managements</button>
-</mat-toolbar>
+<mat-tab-group>
+  <mat-tab label="Budget Management">
+    <h2>Budget Management Space</h2>
+      <div class="budget-tools">
+        <mat-form-field class="search-bar">
+          <input matInput placeholder="Search">
+          <button matSuffix mat-button><mat-icon >search</mat-icon></button>
+          </mat-form-field>
 
-<h2>Budget Management</h2>
-
-<table class="heroes heroes-table">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>User</th>
-      <th>Income Category</th>
-      <th>Amount</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let budget of budgets">
-      <td>{{ budget.id }}</td>
-      <td>{{ budget.name }}</td>
-      <td>{{ budget.user }}</td>
-      <td>{{ budget.income_category }}</td>
-      <td>{{ budget.amount }}</td>
-      <td>
-        <a routerLink="/budget/{{ budget.id }}">
-          <button class="read-button">
-            <i class="fas fa-eye"></i>
-          </button>
-        </a>
-        <a routerLink="/budget/update/{{ budget.id }}">
-          <button class="update-button">
-            <i class="fas fa-edit"></i>
-          </button>
-        </a>
-        <button type="button" class="delete-button" title="delete hero" (click)="delete(budget.id)">          
-          <i class="fas fa-trash-alt"></i> {{ budget.id }}
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+          <div>
+            <button mat-fab extended class="add-budget-buttons">
+              <mat-icon>add</mat-icon>
+              Add budget
+            </button>
+            </div>
+          
+      </div>
+    <table class="heroes heroes-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>User</th>
+          <th>Income Category</th>
+          <th>Amount</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let budget of budgets">
+          <td>{{ budget.id }}</td>
+          <td>{{ budget.name }}</td>
+          <td>{{ budget.user }}</td>
+          <td>{{ budget.income_category }}</td>
+          <td>{{ budget.amount }}</td>
+          <td>
+            <a routerLink="/budget/{{ budget.id }}">
+              <button class="read-button">
+                <i class="fas fa-eye"></i>
+              </button>
+            </a>
+            <a routerLink="/budget/update/{{ budget.id }}">
+              <button class="update-button">
+                <i class="fas fa-edit"></i>
+              </button>
+            </a>
+            <button type="button" class="delete-button" title="delete hero" (click)="delete(budget.id)">
+              <i class="fas fa-trash-alt"></i> {{ budget.id }}
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-tab>
+  <mat-tab label="Income Category Management"> Income Category Management </mat-tab>
+</mat-tab-group>

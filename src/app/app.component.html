@@ -2,7 +2,7 @@
   <div class="left" *ngIf="showSidebar">
     <app-sidebar></app-sidebar>
   </div>
-  <div class="right" [class.full-width]="!showSidebar">
+  <div class="right" [class.full-width]="!showSidebar" [class.left-aligned]="isBudgetUrl">
     <router-outlet></router-outlet>
   </div>
 

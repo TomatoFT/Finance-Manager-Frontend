@@ -4,8 +4,10 @@
   }
   
   .left {
-    width: 15%;
+    display: flex;
+    width: 300px;
     background-color: #f1f1f1;
+    justify-content: space-between;
   }
   
   .right {
@@ -27,3 +29,7 @@
     background-color: white;
   }
 
+.right.left-aligned {
+  justify-content: flex-start;
+  align-items: flex-start;
+}

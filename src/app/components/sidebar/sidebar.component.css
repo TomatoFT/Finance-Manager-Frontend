@@ -1,12 +1,14 @@
 mat-sidenav-container {
     display: flex;
     width: full-width;
+    height: 100vh;
     background-color: rgb(15, 223, 84);
-    justify-content: center;
+    justify-content: space-between;
 
   }
 
 mat-sidenav-list {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -14,4 +16,11 @@ mat-sidenav-list {
 img {
   width: 50%;
   /* height: auto; */
+}
+
+.logo-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
 }

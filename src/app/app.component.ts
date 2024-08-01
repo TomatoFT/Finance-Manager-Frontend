@@ -8,19 +8,19 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   showSidebar: boolean = true;
+  isBudgetUrl: boolean = false;
 
   constructor(private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.showSidebar = event.url !== '/' 
           && event.urlAfterRedirects !== '/' 
-          && event.url != '/auth/signup';
-        
+          && event.url !== '/auth/signup';
+
+        this.isBudgetUrl = event.url.startsWith('/budget');
       }
     });
   }
 }
-
-
