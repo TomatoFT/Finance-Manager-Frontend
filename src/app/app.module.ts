@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
@@ -30,6 +31,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SignupComponent } from './auth/signup/signup.component';
 import { ManagementTableComponent } from './components/management-table/management-table.component';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { ManagementTableComponent } from './components/management-table/manageme
     SidebarComponent,
     SignupComponent,
     ManagementTableComponent,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +60,7 @@ import { ManagementTableComponent } from './components/management-table/manageme
     MatListModule,
     MatIconModule,
     MatButtonModule,
+    MatDialogModule,
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,

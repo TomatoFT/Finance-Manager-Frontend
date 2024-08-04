@@ -12,7 +12,7 @@ export class SidebarComponent {
     { name: 'Budget', route: '/budget' },
     { name: 'Expense', route: '/budget' },
     { name: 'User', route: '/budget' },
-    { name: 'Notification', route: '/budget' },
+    { name: 'Notification', route: '/notifications' },
     { name: 'Analysis', route: '/budget' },
     { name: 'Log Out', route: '/budget' },
   ];

@@ -1,0 +1,17 @@
+<div class="notification">
+    <div class="notification header">
+        <h1>Notification</h1>
+    </div>
+    <div class="notification section">
+        <mat-card appearance="outlined" class="notification item" *ngFor="let notification of notifications">
+            <img mat-card-md-image src="../../assets/logo.png" class="logo-image"/>
+            <mat-card-title>
+                <h3>{{ notification.title }}</h3>
+            </mat-card-title>
+            <mat-card-content>
+                {{ notification.content }}
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+

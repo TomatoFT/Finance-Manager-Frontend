@@ -1,8 +1,8 @@
-export interface expense {
-    expense_id: number,
-    budget_id: number,
+export interface Expense {
+    id: number,
+    budgetID: number,
     amount: number, 
-    expense_category_id: number,
+    expenseCategory: string,
     name: string,
     date: Date,
 }

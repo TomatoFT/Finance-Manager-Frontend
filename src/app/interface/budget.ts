@@ -1,8 +1,8 @@
 export interface Budget {
-    budget_id: number,
-    budget_name: string,
-    income_category_id: number,
-    user_id: number,
+    id: number,
+    name: string,
+    user: number,
+    income_category: string,
     amount: number,
     date: Date
 }

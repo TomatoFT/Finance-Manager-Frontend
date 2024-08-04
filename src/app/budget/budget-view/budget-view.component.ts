@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { BudgetService } from '../../service/budget.service';
 import { AuthService } from '../../service/auth.service';
+import { Budget } from 'src/app/interface/budget';
+import { Field } from 'src/app/interface/fields';
 
 @Component({
   selector: 'app-budget-view',
@@ -8,15 +10,28 @@ import { AuthService } from '../../service/auth.service';
   styleUrls: ['./budget-view.component.css']
 })
 export class BudgetViewComponent implements OnInit {
-  budgets: any[] = [];
+  budgets: Budget[] = [];
+  fields: Field<Budget>[] = [
+    { header: 'ID', property: 'id' },
+    { header: 'Name', property: 'name' },
+    { header: 'User', property: 'user' },
+    { header: 'Income Category', property: 'income_category' },
+    { header: 'Amount', property: 'amount' },
+    { header: 'Date', property: 'date' },
+  ];
+  
+  @Output() onGetBudgets: EventEmitter<void> = new EventEmitter();
+  @Output() onDelete: EventEmitter<number> = new EventEmitter<number>();
 
   constructor(private budgetService: BudgetService, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.getBudgets();
+    console.log(this.budgets);
   }
 
   getBudgets(): void {
+    this.onGetBudgets.emit()
     this.budgetService.getAllData().subscribe(
       budgets => {
         this.budgets = budgets;
@@ -29,6 +44,7 @@ export class BudgetViewComponent implements OnInit {
   }
 
   delete(id: number): void {
+    this.onDelete.emit(id)
     if (confirm('Are you sure you want to delete?')) {
       fetch(`http://localhost:8000/budget/${id}`, {
         method: 'DELETE',

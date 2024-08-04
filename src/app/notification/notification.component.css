@@ -1,0 +1,20 @@
+.notification {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80vw;
+    height: auto;
+}
+
+div.notification.header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+}
+
+.notification.item {
+    margin-bottom: 10px;
+}

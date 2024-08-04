@@ -1,1 +1,43 @@
-<p>management-table works!</p>
+<h2>{{ title }}</h2>
+<div class="budget-tools">
+  <mat-form-field class="search-bar">
+    <input matInput placeholder="Search">
+    <button matSuffix mat-button><mat-icon>search</mat-icon></button>
+  </mat-form-field>
+
+  <div>
+    <button mat-fab extended class="add-budget-buttons">
+      <mat-icon>add</mat-icon>
+      Add budget
+    </button>
+  </div>
+</div>
+
+<table class="heroes heroes-table">
+  <thead>
+    <tr>
+      <th *ngFor="let field of fields">{{ field.header }}</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <td *ngFor="let field of fields">{{ item[field.property] }}</td>
+      <td>
+        <a routerLink="/budget/{{ item.id }}">
+          <button mat-button class="read-button">
+            <mat-icon>remove_red_eye</mat-icon>
+          </button>
+        </a>
+        <a routerLink="/budget/update/{{ item.id }}">
+          <button mat-button class="update-button">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </a>
+        <button matSuffix mat-button title="delete hero"  class="delete-button" (onClick)="handleDelete(item.id)" >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

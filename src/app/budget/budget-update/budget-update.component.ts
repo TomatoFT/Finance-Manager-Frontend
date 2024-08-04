@@ -13,7 +13,7 @@ import { AuthService } from '../../service/auth.service';
 
 export class BudgetUpdateComponent implements OnInit, OnDestroy {
   budgetForm!: FormGroup;
-  data: any = {}; // Change data type to object
+  data: any = {};
   dataSubscription!: Subscription;
 
   constructor(

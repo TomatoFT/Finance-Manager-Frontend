@@ -24,6 +24,8 @@ export class LoginComponent {
       password: this.password
     };
 
+    console.log(`username: ${loginData.username}`)
+
     this.http.post<any>('http://localhost:8000/auth/login/', loginData).subscribe(
       response => {
         // Assuming the backend returns a token in the response
