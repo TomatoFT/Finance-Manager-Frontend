@@ -1,6 +1,6 @@
 mat-sidenav-container {
     display: flex;
-    width: full-width;
+    width: 250px;
     height: 100vh;
     background-color: rgb(15, 223, 84);
     justify-content: space-between;

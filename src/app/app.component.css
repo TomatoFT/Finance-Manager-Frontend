@@ -13,8 +13,8 @@
   .right {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: start;
     background-color: #ffffff;
     padding-left: 2%;
     padding-top: 2%;
