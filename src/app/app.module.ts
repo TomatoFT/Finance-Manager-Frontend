@@ -32,6 +32,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { SignupComponent } from './auth/signup/signup.component';
 import { ManagementTableComponent } from './components/management-table/management-table.component';
 import { NotificationComponent } from './notification/notification.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { NotificationComponent } from './notification/notification.component';
     SignupComponent,
     ManagementTableComponent,
     NotificationComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

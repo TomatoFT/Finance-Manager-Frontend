@@ -9,6 +9,7 @@ import { TokenRefreshComponent } from './auth/token-refresh/token-refresh.compon
 import { LogoutComponent } from './auth/logout/logout.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { NotificationComponent } from './notification/notification.component';
+import { UserComponent } from './user/user.component';
 const routes: Routes = [
   { path: 'budget/add', component: BudgetAddComponent },
   { path: 'budget/update/:id', component: BudgetUpdateComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'auth/logout', component: LogoutComponent},
   { path: 'auth/signup', component: SignupComponent},
   { path: 'notifications', component: NotificationComponent },
+  { path: 'user', component: UserComponent },
   { path: '', component: LoginComponent }
 ];
 

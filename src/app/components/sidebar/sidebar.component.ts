@@ -11,7 +11,7 @@ export class SidebarComponent {
     { name: 'Dashboard', route: '/budget' },
     { name: 'Budget', route: '/budget' },
     { name: 'Expense', route: '/budget' },
-    { name: 'User', route: '/budget' },
+    { name: 'User', route: '/user' },
     { name: 'Notification', route: '/notifications' },
     { name: 'Analysis', route: '/budget' },
     { name: 'Log Out', route: '/budget' },

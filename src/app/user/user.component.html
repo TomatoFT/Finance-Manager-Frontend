@@ -1,0 +1,53 @@
+<div class="user-profile-container" fxLayout="row" fxLayoutAlign="start center">
+    <mat-card class="user-profile-card">
+        <mat-card-header>
+            <div class="profile-header">
+                <img mat-card-avatar class="user-profile-avatar" src="../../assets/anonymous-user.jpeg" />
+            </div>
+            <mat-card-title>{{ user.fullname }}</mat-card-title>
+            <mat-card-subtitle>{{ user.title }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions class="profile-buttons">
+            <button mat-fab extended color="primary" (click)="editProfile()">
+                <mat-icon>photo</mat-icon> Change profile picture
+            </button>
+            <button mat-fab extended color="primary" (click)="editProfile()">
+                <mat-icon>lock</mat-icon> Change password
+            </button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="user-info-card">
+        <mat-card-header>
+            <mat-card-title><strong>User Information</strong></mat-card-title>
+                <button mat-fab extended class="edit-button">
+                    <mat-icon>edit</mat-icon>
+                    Edit
+                </button>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list role="list">
+                <mat-list-item role="listitem"><strong>First Name:</strong> {{ user.firstname }} </mat-list-item>
+                <mat-list-item role="listitem"><strong>Last Name:</strong> {{ user.lastname }} </mat-list-item>
+                <mat-list-item role="listitem"><strong>Date of Birth:</strong> {{ '09/10/2002' }} </mat-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="user-info-card">
+        <mat-card-header>
+            <mat-card-title><strong>Contract</strong></mat-card-title>
+                <button mat-fab extended class="edit-button">
+                    <mat-icon>edit</mat-icon>
+                    Edit
+                </button>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list role="list">
+                <mat-list-item role="listitem"><strong>Email:</strong> {{ user.email }} </mat-list-item>
+                <mat-list-item role="listitem"><strong>Phone:</strong> {{ user.phone }}</mat-list-item>
+                <mat-list-item role="listitem"><strong>Address:</strong> {{ user.address }}</mat-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+</div>

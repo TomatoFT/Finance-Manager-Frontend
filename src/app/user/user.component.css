@@ -1,0 +1,72 @@
+.user-profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .user-profile-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    width: 60vw;
+    font-size: 30px;
+    margin: 10px;
+    background-color: rgb(200, 245, 248);
+  }
+
+  .user-info-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 60vw;
+    font-size: 20px;
+    margin: 10px;
+    background-color: rgb(200, 245, 248);
+  }  
+  
+  .user-profile-avatar {
+    display: flex;
+    justify-content: center;
+    background-image: url('https://via.placeholder.com/40');
+    width: 150px;
+    height: 150px;
+
+  }
+  
+
+.user-info-card.title {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+mat-card mat-card-actions.user-profile-card.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.edit-button {
+    background-color: azure;
+    color: grey;
+}
+
+mat-card.user-profile-card mat-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+mat-card.user-info-card mat-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 25px;
+    padding: 20px;
+}
