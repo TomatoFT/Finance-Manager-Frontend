@@ -3,6 +3,7 @@ import { BudgetService } from '../../service/budget.service';
 import { AuthService } from '../../service/auth.service';
 import { Budget } from 'src/app/interface/budget';
 import { Field } from 'src/app/interface/fields';
+import { incomeCategory } from 'src/app/interface/incomeCategory';
 
 @Component({
   selector: 'app-budget-view',
@@ -11,13 +12,19 @@ import { Field } from 'src/app/interface/fields';
 })
 export class BudgetViewComponent implements OnInit {
   budgets: Budget[] = [];
-  fields: Field<Budget>[] = [
+  incomeCategory: incomeCategory[] = [];
+  
+  budgetsFields: Field<Budget>[] = [
     { header: 'ID', property: 'id' },
     { header: 'Name', property: 'name' },
     { header: 'User', property: 'user' },
     { header: 'Income Category', property: 'income_category' },
     { header: 'Amount', property: 'amount' },
     { header: 'Date', property: 'date' },
+  ];
+  incomeCategoryFields: Field<incomeCategory>[] = [
+    { header: 'ID', property: 'id' },
+    { header: 'Name', property: 'name' },
   ];
   
   @Output() onGetBudgets: EventEmitter<void> = new EventEmitter();

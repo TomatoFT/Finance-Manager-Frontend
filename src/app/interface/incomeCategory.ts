@@ -1,4 +1,4 @@
 export interface incomeCategory {
-    incomeCategoryId: number,
+    id: number,
     name: string
 }

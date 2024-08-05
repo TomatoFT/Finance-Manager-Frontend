@@ -14,10 +14,20 @@
       <app-management-table
         [title]="'Budget Management Space'"
         [data]="budgets"
-        [fields]="fields"
+        [fields]="budgetsFields"
         (onDelete)="delete($event)"
       ></app-management-table>
     </ng-template>
   </mat-tab>
-  <mat-tab label="Income Category Management"> Income Category Management </mat-tab>
+  <mat-tab label="Income Category Management">
+    <ng-template matTabContent>
+      <app-management-table
+        [title]="'Income Category Management Space'"
+        [data]="incomeCategory"
+        [fields]="incomeCategoryFields"
+        (onDelete)="delete($event)"
+      ></app-management-table>
+    </ng-template>
+  </mat-tab>
+
 </mat-tab-group>
